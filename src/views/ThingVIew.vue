@@ -1,5 +1,5 @@
 <template>
-  <h1>Welcome to Persons</h1>
+  <h1>Welcome to Movies</h1>
   <div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-4 g-4">
       <div v-for="thing in things" :key="thing.id" class="col">
@@ -19,7 +19,7 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Thing',
+  name: 'Things',
   data () {
     return {
       things: []
