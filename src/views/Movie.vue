@@ -4,6 +4,7 @@
     <div class="row row-cols-1 row-cols-md-4 g-4">
       <div v-for="thing in things" :key="thing.id" class="col">
         <div class="card h-100">
+          <ing src="../asserts/moon.png" class="card-img-top" alt="thing.filmName + thing.filmDescription"> </ing>
           <div class="card-body">
             <h5 class="card-title">{{ thing.filmName }} {{ thing.filmDescription }} {{thing.filmGenre}}</h5>
             <p class="card-text">
