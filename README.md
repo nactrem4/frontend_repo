@@ -1,3 +1,4 @@
+[![CI](https://github.com/nactrem4/frontend_repo/actions/workflows/ci.yml/badge.svg)](https://github.com/nactrem4/frontend_repo/actions/workflows/ci.yml)
 # project-frontend
 
 ## Project setup
