@@ -34,8 +34,8 @@ export default {
     }
     fetch(endpoint, requestOptions)
       .then(response => response.json())
-      .then(result => result.forEach(person => {
-        this.persons.push(person)
+      .then(result => result.forEach(thing => {
+        this.things.push(thing)
       }))
       .catch(error => console.log('error', error))
   }
