@@ -6,9 +6,9 @@
         <div class="card h-100">
           <ing src="../asserts/moon.png" class="card-img-top" alt="thing.filmName + thing.filmDescription"> </ing>
           <div class="card-body">
-            <h5 class="card-title">{{ thing.filmName }} {{ thing.filmDescription }} {{thing.filmGenre}}</h5>
+            <h5 class="card-title">{{ thing.name }} {{ thing.description }} {{thing.genre}}</h5>
             <p class="card-text">
-              {{ thing.filmDescription }} {{ thing.filmName }} {{thing.filmGenre}}
+              {{ thing.description }} {{ thing.name }} {{thing.genre}}
             </p>
           </div>
         </div>
@@ -20,7 +20,7 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Things',
+  name: 'Movie',
   data () {
     return {
       things: []
@@ -30,7 +30,8 @@ export default {
     const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/things'
     const requestOptions = {
       method: 'GET',
-      redirect: 'follow'
+      redirect: 'follow',
+      mode: 'cors'
     }
     fetch(endpoint, requestOptions)
       .then(response => response.json())
