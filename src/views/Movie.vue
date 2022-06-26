@@ -41,6 +41,21 @@ export default {
       .catch(error => console.log('error', error))
   }
 }
+{
+  const proxyUrl = 'https://film-so22.herokuapp.com/'
+  const targetUrl = 'https://webtech-movie-frontend.herokuapp.com'
+  fetch(proxyUrl + targetUrl)
+    .then(blob => blob.json())
+    .then(data => {
+      console.table(data)
+      document.querySelector('pre').innerHTML = JSON.stringify(data, null, 2)
+      return data
+    })
+    .catch(e => {
+      console.log(e)
+      return e
+    })
+}
 </script>
 
 <style scoped>
